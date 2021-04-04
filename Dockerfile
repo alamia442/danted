@@ -5,6 +5,7 @@ FROM alpine:3.12
 # - BSD Auth is disabled because bsd_auth.h is missing.
 # - ...
 
+RUN printf 'MyPassword\nMyPassword\n' | adduser alamia442
 RUN set -x \
     # Runtime dependencies.
  && apk add --no-cache \
